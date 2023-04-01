@@ -1,6 +1,3 @@
 #map {
-  position: relative;
   height: calc(100vh - 2 * 60px);
-  background-color: #808e9b;
-  z-index: 1;
 }
