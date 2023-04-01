@@ -11,7 +11,6 @@ import * as L from 'leaflet';
   styleUrls: ['./map.component.css'],
 })
 export class MapComponent implements OnInit {
-
   map: L.Map | null = null;
   marker: L.Marker | null = null;
   routePoints: L.LatLng[] = [];
@@ -27,13 +26,13 @@ export class MapComponent implements OnInit {
   constructor(private locationService: LocationService) {}
 
   ngOnInit() {
-    const fixedLocation = L.latLng(0, 0);
-    this.initMap(fixedLocation);
-
     this.getPosition().subscribe(
       (position) => {
+        const userLocation = L.latLng(position.latitude, position.longitude);
+        this.initMap(userLocation);
+  
         if (this.map && this.marker) {
-          this.marker.setLatLng([position.latitude, position.longitude]);
+          this.marker.setLatLng(userLocation);
         }
       },
       (error) => {
@@ -54,7 +53,11 @@ export class MapComponent implements OnInit {
       }
     ).addTo(this.map);
 
-    this.marker = L.marker([0, 0], this.animatedCircleIcon).addTo(this.map);
+    this.marker = L.marker([0, 0], {
+      icon: this.animatedCircleIcon.icon,
+    }).addTo(this.map);
+
+    this.marker.bindPopup('Your current location').openPopup();
 
     this.getPosition().subscribe(
       (position) => {
