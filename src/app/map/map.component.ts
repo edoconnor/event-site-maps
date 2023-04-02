@@ -4,6 +4,7 @@ import { LocationService } from '../services/location.service';
 import { map } from 'rxjs/operators';
 import 'leaflet/dist/leaflet.css';
 import * as L from 'leaflet';
+import * as geolib from 'geolib';
 
 @Component({
   selector: 'app-map',
@@ -30,7 +31,7 @@ export class MapComponent implements OnInit {
       (position) => {
         const userLocation = L.latLng(position.latitude, position.longitude);
         this.initMap(userLocation);
-  
+
         if (this.map && this.marker) {
           this.marker.setLatLng(userLocation);
         }
@@ -40,6 +41,18 @@ export class MapComponent implements OnInit {
       }
     );
   }
+
+  redIcon = L.icon({
+    iconUrl: '/assets/red-pin.png',
+    iconSize: [24, 24],
+  });
+
+  blueIcon = L.icon({
+    iconUrl: '/assets/blue-pin.png',
+    iconSize: [24, 24],
+  });
+
+  blueLocation = L.latLng(42.36641024559977, -71.05437002052903);
 
   initMap(fixedLocation: L.LatLng) {
     this.map = L.map('map').setView(fixedLocation, 16);
@@ -52,10 +65,16 @@ export class MapComponent implements OnInit {
         crossOrigin: true,
       }
     ).addTo(this.map);
+    const blueMarker = L.marker(this.blueLocation, {
+      icon: this.blueIcon,
+    }).addTo(this.map);
 
     this.marker = L.marker(fixedLocation, {
       icon: this.animatedCircleIcon.icon,
     }).addTo(this.map);
+
+    const popupContent = '<p>You are here</p>';
+    this.marker.bindPopup(popupContent).openPopup();
   }
 
   getPosition(): Observable<{ latitude: number; longitude: number }> {

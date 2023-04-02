@@ -7,13 +7,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { MapComponent } from './map/map.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    MapComponent
+    MapComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
