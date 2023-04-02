@@ -27,3 +27,12 @@
     opacity: 0;
   }
 }
+.content {
+  height: calc(100vh - 120px);
+}
+
+@media (max-width: 768px) {
+  .content {
+    height: auto;
+  }
+}
