@@ -1,9 +1,4 @@
 #map {
-  height: calc(100vh - 2 * 60px);
+  max-height: calc(100vh - 2 * 60px);
 }
 
-@media (max-width: 768px) {
-  #map {
-    height: calc(100vh - 120px);
-  }
-}
