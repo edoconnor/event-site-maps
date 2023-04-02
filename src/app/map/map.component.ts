@@ -56,43 +56,6 @@ export class MapComponent implements OnInit {
     this.marker = L.marker(fixedLocation, {
       icon: this.animatedCircleIcon.icon,
     }).addTo(this.map);
-    
-    this.marker.bindPopup('Your current location').openPopup();
-
-    this.getPosition().subscribe(
-      (position) => {
-        const latLng = L.latLng(position.latitude, position.longitude);
-        if (this.map && this.marker) {
-          const newLatLng = this.getNewLatLng(latLng, 300); // Replace 100 with the distance you want to move the marker
-          this.marker.setLatLng(newLatLng);
-          this.map.setView(newLatLng);
-          this.marker.openPopup();
-          setTimeout(() => {
-            if (this.marker) {
-              this.marker.closePopup();
-              this.marker.unbindPopup();
-              this.marker.bindPopup('New location').openPopup();
-            }
-          }, 5000); // Replace 5000 with the amount of time you want to wait in milliseconds
-        }
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-  }
-  
-  getNewLatLng(latLng: L.LatLng, distance: number) {
-    const R = 6371e3; // Earth's radius in meters
-    const brng = 45 * Math.PI / 180; // Bearing in radians
-    const lat1 = latLng.lat * Math.PI / 180; // Convert to radians
-    const lon1 = latLng.lng * Math.PI / 180; // Convert to radians
-    const d = distance; // Distance in meters
-  
-    const lat2 = Math.asin(Math.sin(lat1) * Math.cos(d / R) + Math.cos(lat1) * Math.sin(d / R) * Math.cos(brng));
-    const lon2 = lon1 + Math.atan2(Math.sin(brng) * Math.sin(d / R) * Math.cos(lat1), Math.cos(d / R) - Math.sin(lat1) * Math.sin(lat2));
-    
-    return L.latLng(lat2 * 180 / Math.PI, lon2 * 180 / Math.PI); // Convert back to degrees
   }
 
   getPosition(): Observable<{ latitude: number; longitude: number }> {
