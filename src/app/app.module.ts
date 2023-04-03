@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MapComponent } from './map/map.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DetailsComponent } from './details/details.component';
+import { GreenwayComponent } from './greenway/greenway.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DetailsComponent } from './details/details.component';
     NavbarComponent,
     FooterComponent,
     MapComponent,
-    DetailsComponent
+    DetailsComponent,
+    GreenwayComponent
   ],
   imports: [
     BrowserModule,
