@@ -71,7 +71,7 @@ export class MapComponent implements OnInit {
     }).addTo(this.map);
 
     const popupContent =
-      '<p><strong>You are here!</strong> But if this was your event app your site details would be overlayed on top of this map so your participants could see where they need to go!</p>';
+      '<p><strong>You are here!</strong> But if this was your event site map your venue details would be overlayed on top of this map so attendees could see where to go!</p>';
     this.marker.bindPopup(popupContent).openPopup();
   }
 
