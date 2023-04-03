@@ -11,7 +11,7 @@
   background-color: #dfe6e9;
   width: 100%;
   min-height: 100vh;
-  padding-top: .5rem;
+  padding-top: 0.5rem;
   padding-bottom: 1rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -22,5 +22,10 @@
   .content {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    width: 100vw;
+  }
+  .container {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
