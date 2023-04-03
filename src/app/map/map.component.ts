@@ -65,12 +65,13 @@ export class MapComponent implements OnInit {
         crossOrigin: true,
       }
     ).addTo(this.map);
-    
+
     this.marker = L.marker(fixedLocation, {
       icon: this.animatedCircleIcon.icon,
     }).addTo(this.map);
 
-    const popupContent = '<p><strong>You are here!</strong> But if this was your event app your site details would be overlayed on top of the map so participants could see where they need to go!</p>';
+    const popupContent =
+      '<p><strong>You are here!</strong> But if this was your event app your site details would be overlayed on top of this map so your participants could see where they need to go!</p>';
     this.marker.bindPopup(popupContent).openPopup();
   }
 
