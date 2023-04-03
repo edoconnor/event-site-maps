@@ -431,7 +431,7 @@ export class GreenwayComponent implements OnInit {
   number_14Location = L.latLng(42.35967, -71.05206);
 
   initMap(fixedLocation: L.LatLng) {
-    this.map = L.map('map').setView(fixedLocation, 21);
+    this.map = L.map('map').setView(fixedLocation, 19);
     L.tileLayer(
       'https://api.mapbox.com/styles/v1/mapbox/satellite-v9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZWRvY29ubm9yIiwiYSI6ImNsMmx4M2x1MTBnNWEzY3A2a3Fsd29ycTkifQ.aYhIjwbY7BnXcwcS15_MNg',
       {

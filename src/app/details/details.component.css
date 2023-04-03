@@ -10,7 +10,7 @@
 
 .content {
   font-family: "Ubuntu", sans-serif;
-  background-color: #dfe6e9;
+
   width: 100%;
   margin: 0 auto;
 }
@@ -20,6 +20,14 @@
 }
 .placeholder {
   height: 10vh;
+}
+
+.paragraph{
+  padding-top: .5rem;
+}
+
+button {
+  margin-bottom: .5rem;
 }
 
 @media screen and (max-width: 767px) {
