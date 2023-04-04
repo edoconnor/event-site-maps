@@ -75,7 +75,7 @@ export class MapComponent implements OnInit {
     };
 
     const popupContent =
-      '<div class="custom-popup img-fluid"><img src="assets/esm-logo.png" style="max-width: 200px"/><p><strong>You are here!</strong> But if this was your event site map your venue details would be overlayed on top of this map so attendees could see where to go!</p></div>';
+      '<div class="custom-popup img-fluid"><img src="assets/esm-logo.png" style="max-width: 200px"/><p><strong>You are here!</strong> But if this was your site map your venue details would be overlayed on top!</p></div>';
       this.marker.bindPopup(popupContent, popupOptions).openPopup();
   }
 
