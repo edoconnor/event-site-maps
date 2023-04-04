@@ -430,6 +430,13 @@ export class GreenwayComponent implements OnInit {
   number_13Location = L.latLng(42.35967, -71.05211);
   number_14Location = L.latLng(42.35967, -71.05206);
 
+  mbtaIcon = L.icon({
+    iconUrl: '/assets/mbta.png',
+    iconSize: [24, 24],
+  });
+
+  mbtaLocation = L.latLng(42.426805472046574, -71.0743360438534);
+
   initMap(fixedLocation: L.LatLng) {
     this.map = L.map('map').setView(fixedLocation, 19);
     L.tileLayer(
