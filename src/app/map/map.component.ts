@@ -75,8 +75,8 @@ export class MapComponent implements OnInit {
     };
 
     const popupContent =
-      '<div class="custom-popup img-fluid"><img src="assets/esm-logo.png" style="max-width: 200px"/><p><strong>You are here!</strong> But if this was your site map your venue details would be overlayed on top!</p></div>';
-      this.marker.bindPopup(popupContent, popupOptions).openPopup();
+      '<div class="custom-popup img-fluid"><img src="assets/logo-tranz.png"/><p><strong>You are here!</strong> But if this was your site map your venue details would be displayed on the map!</p></div>';
+    this.marker.bindPopup(popupContent, popupOptions).openPopup();
   }
 
   getPosition(): Observable<{ latitude: number; longitude: number }> {
