@@ -9,7 +9,6 @@ import { MapComponent } from './map/map.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DetailsComponent } from './details/details.component';
 import { GreenwayComponent } from './greenway/greenway.component';
-import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +17,13 @@ import { TestComponent } from './test/test.component';
     FooterComponent,
     MapComponent,
     DetailsComponent,
-    GreenwayComponent,
-    TestComponent
+    GreenwayComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]

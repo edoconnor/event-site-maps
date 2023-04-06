@@ -6,6 +6,7 @@ import 'leaflet/dist/leaflet.css';
 import * as L from 'leaflet';
 import * as geolib from 'geolib';
 
+
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
@@ -75,7 +76,7 @@ export class MapComponent implements OnInit {
     };
 
     const popupContent =
-      '<div class="custom-popup img-fluid"><img src="assets/logo-tranz.png"/><p><strong>You are here!</strong> But if this was your site map your venue details would be displayed on the map!</p></div>';
+      `<div class="custom-popup img-fluid"><img src="assets/logo-tranz.png"/><p><strong>You are here!</strong> But if this was your site map your venue details would be displayed on the map!</p></div>`;
     this.marker.bindPopup(popupContent, popupOptions).openPopup();
   }
 

@@ -5,6 +5,10 @@
   max-width: 850px;
 }
 
+.row {
+  margin-top: 1rem;
+}
+
 h1 {
   font-family: "Outfit", sans-serif;
   font-size: 24px;
@@ -21,16 +25,14 @@ p {
     display: flex;
     flex-direction: column-reverse;
   }
-  #row2 {
-    display: flex;
-    flex-direction: column;
-  }
-
   .col-md-6 {
     width: 100%;
   }
   .text-content {
     padding-top: 2rem;
+  }
+  #row2 {
+    flex-direction: column;
   }
 }
 .logo {
@@ -47,5 +49,10 @@ p {
   padding-right: 0.5rem;
 }
 #row2 {
-  margin-top: 1rem;
+  background-color: #dff9fb;
+  padding-bottom: 3rem;
+}
+.placeholder {
+  min-height: 100px;
+  background-color: white;
 }
