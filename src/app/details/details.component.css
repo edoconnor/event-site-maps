@@ -1,7 +1,6 @@
 .container {
   display: flex;
   flex-direction: column;
-  padding-right: 2rem;
   max-width: 850px;
 }
 
@@ -34,6 +33,7 @@ p {
   #row2 {
     flex-direction: column;
   }
+
 }
 .logo {
   margin-bottom: 1rem;
@@ -50,9 +50,12 @@ p {
 }
 #row2 {
   background-color: #dff9fb;
-  padding-bottom: 3rem;
 }
 .placeholder {
   min-height: 100px;
   background-color: white;
+}
+#simplify {
+  padding: 2.5rem;
+  margin-top: 1rem;
 }

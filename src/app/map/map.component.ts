@@ -6,7 +6,6 @@ import 'leaflet/dist/leaflet.css';
 import * as L from 'leaflet';
 import * as geolib from 'geolib';
 
-
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
@@ -56,6 +55,9 @@ export class MapComponent implements OnInit {
   blueLocation = L.latLng(42.36641024559977, -71.05437002052903);
 
   initMap(fixedLocation: L.LatLng) {
+    if (this.map) {
+      return;
+    }
     this.map = L.map('map').setView(fixedLocation, 16);
     L.tileLayer(
       'https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png',
@@ -75,8 +77,7 @@ export class MapComponent implements OnInit {
       maxWidth: 200,
     };
 
-    const popupContent =
-      `<div class="custom-popup img-fluid"><img src="assets/logo-tranz.png"/><p><strong>You are here!</strong> But if this was your site map your venue details would be displayed on the map!</p></div>`;
+    const popupContent = `<div class="custom-popup img-fluid"><img src="assets/logo-tranz.png"/><p><strong>You are here!</strong> But if this was your site map your venue details would be displayed on the map!</p></div>`;
     this.marker.bindPopup(popupContent, popupOptions).openPopup();
   }
 
