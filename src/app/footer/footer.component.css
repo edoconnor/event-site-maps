@@ -28,3 +28,6 @@ footer {
 h2 {
   color: white;
 }
+#button-left{
+  margin-right: -.5rem;
+}

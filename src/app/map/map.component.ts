@@ -77,7 +77,7 @@ export class MapComponent implements OnInit {
       maxWidth: 200,
     };
 
-    const popupContent = `<div class="custom-popup img-fluid"><img src="assets/logo-tranz.png"/><p><strong>You are here!</strong> But if this was your site map your venue details would be displayed on the map!</p></div>`;
+    const popupContent = `<div class="custom-popup img-fluid"><img src="assets/logo-tranz.png"/><p>We build custom site maps with advanced features! <a href="/details">More...</a></p></div>`;
     this.marker.bindPopup(popupContent, popupOptions).openPopup();
   }
 
