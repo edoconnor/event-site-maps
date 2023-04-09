@@ -1,35 +1,24 @@
-
 .container {
   max-width: 1000px;
 }
-
-.col-md-6 {
-  padding-top: 2rem;
-}
-
 #map {
   height: 500px;
   width: 500px;
+  box-sizing: border-box;
 }
-
-#text {
+.text {
   height: 500px;
-  width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  line-height: 8px;
+  margin-left: 1rem;
 }
-
-#logo {
-  margin-bottom: 1rem;
+.contact {
+    line-height: .5rem;
 }
-
-@media (max-width: 700px) {
-  #text {
-    min-height: auto;  
-    height: auto;  
-    max-height: 50vh; 
+@media (max-width: 768px) {
+  .text {
+    margin-left: 0;
+    width: 100%;
   }
 }
