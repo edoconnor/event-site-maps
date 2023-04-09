@@ -14,11 +14,28 @@
   margin-left: 1rem;
 }
 .contact {
-    line-height: .5rem;
+  line-height: 0.5rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .text {
     margin-left: 0;
     width: 100%;
+  }
+  #map {
+    height: 500px;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 400px) {
+  .text {
+    height: 50vh;
+    margin-left: 0;
+    width: 100%;
+  }
+  #map {
+    height: 500px;
+    width: 100vw;
+    box-sizing: border-box;
   }
 }
