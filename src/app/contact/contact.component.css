@@ -2,7 +2,7 @@
   max-width: 1000px;
 }
 .col-md-12 {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 #map {
   height: 500px;
@@ -42,5 +42,15 @@
     height: 500px;
     width: 100vw;
     box-sizing: border-box;
+    display: none;
+  }
+}
+@media (max-width: 1000px) {
+  #map {
+    margin: 0 auto;
+  }
+  .text {
+    border-radius: 0;
+    box-shadow: none;
   }
 }
