@@ -47,12 +47,7 @@ export class MapComponent implements OnInit {
     iconSize: [24, 24],
   });
 
-  blueIcon = L.icon({
-    iconUrl: '/assets/blue-pin.png',
-    iconSize: [24, 24],
-  });
-
-  blueLocation = L.latLng(42.36641024559977, -71.05437002052903);
+  redLocation = L.latLng(42.36641024559977, -71.05437002052903);
 
   initMap(fixedLocation: L.LatLng) {
     if (this.map) {

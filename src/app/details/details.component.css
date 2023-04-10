@@ -42,6 +42,10 @@ p {
   #row2 {
     flex-direction: column;
   }
+  p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 .logo {
   margin-bottom: 1rem;
