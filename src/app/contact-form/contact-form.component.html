@@ -1,42 +1,41 @@
-<div class="wrapper-box">
-  <div class="container">
-    <div *ngIf="!isSubmitted">
-      <div class="form-container">
-        <h2 class="text-center mt-5 mb-3">Contact Form</h2>
-        <div class="row">
-          <div class="col-md-6 offset-md-3">
-            <form [formGroup]="FormData" (ngSubmit)="onSubmit()" method="POST">
-              <div class="mb-3 row form-group">
-                <input
-                  type="email"
-                  class="form-control"
-                  name="Email"
-                  aria-describedby="emailHelp"
-                  placeholder="Your Email"
-                  formControlName="Email"
-                />
-              </div>
-              <div class="mb-3 row form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  name="Fullname"
-                  placeholder="Full Name"
-                  formControlName="Fullname"
-                />
-              </div>
+<div class="container">
+  <div *ngIf="!isSubmitted">
+    <div class="form-container">
+      <h2 class="text-center">Contact Form</h2>
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <form [formGroup]="FormData" (ngSubmit)="onSubmit()" method="POST">
+            <div class="mb-3 row form-group">
+              <input
+                type="email"
+                class="form-control"
+                name="Email"
+                aria-describedby="emailHelp"
+                placeholder="Your Email"
+                formControlName="Email"
+              />
+            </div>
+            <div class="mb-3 row form-group">
+              <input
+                type="text"
+                class="form-control"
+                name="Fullname"
+                placeholder="Full Name"
+                formControlName="Fullname"
+              />
+            </div>
 
-              <div class="mb-3 row form-group">
-                <textarea
-                  class="form-control"
-                  formControlName="Comment"
-                  placeholder="Comment"
-                  name="Comment"
-                  rows="5"
-                >
-                </textarea>
-              </div>
-              <div class="text-center mt-3">
+            <div class="mb-3 row form-group">
+              <textarea
+                class="form-control"
+                formControlName="Comment"
+                placeholder="Comment"
+                name="Comment"
+                rows="5"
+              >
+              </textarea>
+            </div>
+            <div class="text-center mt-3">
               <button
                 type="submit"
                 class="btn btn-outline-primary"
@@ -45,16 +44,15 @@
                 Submit
               </button>
             </div>
-            </form>
-          </div>
+          </form>
         </div>
       </div>
     </div>
-    <div *ngIf="isSubmitted">
-      <div class="container text-center">
-        <div class="message">
-          <h3>Thank you for your message!</h3>
-        </div>
+  </div>
+  <div *ngIf="isSubmitted">
+    <div class="container text-center">
+      <div class="message">
+        <h3>Thank you for your message!</h3>
       </div>
     </div>
   </div>
