@@ -10,8 +10,6 @@ const routes: Routes = [
   { path: 'map', component: MapComponent },
   { path: 'contact', component: ContactFormComponent },
   { path: 'details', component: DetailsComponent },
-  { path: 'form', component: ContactFormComponent },
-  { path: 'greenway', component: GreenwayComponent },
   { path: '**', redirectTo: 'map', pathMatch: 'full' },
 ];
 

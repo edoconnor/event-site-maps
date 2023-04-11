@@ -36,8 +36,9 @@ body {
   max-width: 150px;
   background-color: #c0392b;
   padding: 0.5rem;
+  padding-top: 0.75rem;
   font-family: "Outfit", sans-serif;
-  font-size: 15px;
+  font-size: 1rem;
   color: white;
 }
 .custom-popup a[href="/details"] {
