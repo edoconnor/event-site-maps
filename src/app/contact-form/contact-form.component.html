@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div *ngIf="!isSubmitted">
-    <div class="form-container container-fluid text-center mt-5">
+    <div class="form-container container-fluid text-center">
       <h2 class="text-center">Contact Form</h2>
 
       <form [formGroup]="FormData" (ngSubmit)="onSubmit()" method="POST">
