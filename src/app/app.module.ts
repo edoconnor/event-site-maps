@@ -8,7 +8,11 @@ import { MapComponent } from './map/map.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DetailsComponent } from './details/details.component';
 import { GreenwayComponent } from './greenway/greenway.component';
-import { ContactComponent } from './contact/contact.component';
+
+import { FormComponent } from './form/form.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,12 +22,16 @@ import { ContactComponent } from './contact/contact.component';
     MapComponent,
     DetailsComponent,
     GreenwayComponent,
-    ContactComponent
+
+    FormComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
