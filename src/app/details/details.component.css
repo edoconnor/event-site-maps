@@ -46,6 +46,9 @@ p {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+  button {
+    margin-bottom: 1rem;
+  }
 }
 .logo {
   margin-bottom: 1rem;
